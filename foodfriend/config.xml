@@ -14,11 +14,11 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 -->
-<widget xmlns:rim="http://www.blackberry.com/ns/widgets" id="chatSampleJQM" version="0.1.0.1" rim:header="RIM-Widget:rim/widget" xmlns="http://www.w3.org/ns/widgets">
+<widget xmlns:rim="http://www.blackberry.com/ns/widgets" id="FriendlyFood" version="0.1.0.1" rim:header="RIM-Widget:rim/widget" xmlns="http://www.w3.org/ns/widgets">
   <rim:navigation mode="focus" />
-  <name>Chat Sample - JQM</name>
-  <description>An example of how to use different BlackBerry UI layouts and controls</description>
-  <author href="https://github.com/jasondscott">Jason Scott</author>
+  <name>FriendlyFood</name>
+  <description>Aplicativo de revision de estado de la salud de los medicamentos</description>
+  <author href="https://github.com/rampmaster">Pollos en Dieta</author>
   <icon src="assets\img\icon.png" />
   <icon src="assets\img\icon.png" rim:hover="true" />
   <content src="index.html" />
