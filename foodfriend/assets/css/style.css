@@ -342,6 +342,10 @@ background-image: none !important;
  
 }
 
+.featurette-divider {
+margin: 16px 0 !Important;
+}
+
 .pre-info
 {
 font-size: 14px;
@@ -352,11 +356,27 @@ color: #8f8f8f;
 .form-ingreso label
 {
 
-   color: #01877C;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 0 0 10px;
-    text-transform: uppercase;
+color: #01877C;
+font-size: 12px;
+font-weight: bold;
+margin: 15px 0 10px;
+text-transform: uppercase;
+}
+
+
+.featurette {
+margin: auto;
+overflow: hidden;
+padding-top: 75px;
+width: 98% !important;
+}
+
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input
+{
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
 }
 
 
@@ -402,6 +422,38 @@ color: #fff;
 transition: background 1s ease;
 }
 
+
+.edit-feat
+{
+background: url("../../assets/img/glyphicons-halflings.png") no-repeat scroll 0 -72px transparent;
+display: block;
+height: 16px;
+width: 16px;
+}
+
+.wrapper-results
+{
+-moz-border-radius:20px;
+-webkit-border-radius:20px;
+border-radius:20px;
+background: none repeat scroll 0 0 #B8FEF8;
+padding: 13px;
+}
+
+button#search-button {
+    background: url("../../assets/img/search_button.png") no-repeat scroll 0 -53px transparent;
+    border-style: none;
+    cursor: pointer;
+    height: 26px;
+    right: 5px;
+    text-indent: -9999px;
+    top: 4px;
+    width: 26px;
+}
+
+button#search-button:hover {
+ background: url("../../assets/img/search_button.png") no-repeat scroll 0 0 transparent;
+}
 
 /* ==|== media queries ====================================================== */
 
