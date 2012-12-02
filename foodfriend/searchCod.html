@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pollos en Dieta (TESTING)</title>
+    <title>Pollos en Dieta (Simple)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -60,17 +60,16 @@
 		<div id="main" class="wrapper clearfix">
 			
 			<article>
-				<section>
-					<form class="well">
+				<section>							
+					<form class="well" name="input" action="./getFicha.html" method="get">
 					  <fieldset>
 						<legend>Codigo de Barra</legend>
 						<label>Codigo de Barra</label>
 						<input type="text" placeholder="Ejemplo: 7802000002557" name="codigo" id="codigo">
 						<span class="help-block">Ingrese el numero de codigo de barra</span>
-						<button type="submit" class="btn" id="buscar">Buscar</button>
+						<input type="submit" value="Buscar">
 					  </fieldset>
-					</form>
-						
+					</form>						
 					<ul class="landing-btns" >
 						<li><div class="boton"><a class="boton" href="index.html">Volver</a></div></li>
 					</ul>
@@ -92,15 +91,7 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/libs/modernizr-2.0.6.min.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function () {
-		alert("TEST");
-		$("form #buscar").click(function()
-			window.location.href = "./getFicha.html?code=1234";
-			// window.location.href = "./getFicha.html?code="$("#codigo").get(0).value;
-		});
-	});	  
-    </script>
+	
 	
   </body>
 </html>

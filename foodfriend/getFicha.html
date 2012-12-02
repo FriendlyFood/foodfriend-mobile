@@ -36,8 +36,8 @@
 		
 		$(document).ready(function () {
 			// var frank_param = "8480000107480"; // gup( 'code' );
-			var frank_param = gup( 'code' );
-			alert(frank_param);
+			var frank_param = gup( 'codigo' );
+			// alert(frank_param);
 			$.ajax({ // ajax call starts
 				url: 'http://192.168.0.123/codeigniter/index.php/api/search/producto/code/'+frank_param+'/format/json', 
 				dataType: 'json', // Choosing a JSON datatype
@@ -60,7 +60,7 @@
 <body>
 	<div id="container">
         <div id="contact-form" class="clearfix">
-			<form method="post" action="">
+			<form method="post" action="./index.html">
 		        <div id="labelProducto">Producto</div>
 		        <div id="producto"></div>
 				
