@@ -417,6 +417,7 @@ text-shadow:1px 1px 0px #092138;
 
 
 
+
 .btns:hover{
 background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #226db3), color-stop(1, #08588a) );
 background:-moz-linear-gradient( center top, #226db3 5%, #08588a 100% );
