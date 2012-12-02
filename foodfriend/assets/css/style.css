@@ -1,4 +1,4 @@
-/* HTML5 ✰ Boilerplate
+/* HTML5 ? Boilerplate
  * ==|== normalize ==========================================================
  */
 
@@ -333,6 +333,13 @@ background-image: none;
     background-color: #027168 !important; 
   }
 
+  
+  .navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #FFFFFF !important;
+    border-top-color: #FFFFFF !important;
+}
+  
+  
 /* btn menu responsivo */
 
 .navbar-inverse .btn-navbar
@@ -440,6 +447,12 @@ background: none repeat scroll 0 0 #B8FEF8;
 padding: 13px;
 }
 
+
+.wrapper-results h3 {
+color: #000000;
+font-size: 18px;
+}
+
 button#search-button {
     background: url("../../assets/img/search_button.png") no-repeat scroll 0 -53px transparent;
     border-style: none;
@@ -454,6 +467,80 @@ button#search-button {
 button#search-button:hover {
  background: url("../../assets/img/search_button.png") no-repeat scroll 0 0 transparent;
 }
+
+
+
+/* ficha de productos */
+
+.wrapper-ficha h1
+{
+font-size: 24px;
+color: #01a294;
+ margin: 0;
+ line-height: 20px;
+}
+.detail-title
+{
+font-size: 12px;
+color: #01a294;
+}
+
+.wrapper-ficha ul , .wrapper-ficha p
+{
+margin: 0;
+padding: 0;
+}
+
+
+.wrapper-ficha ul li
+{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.wrapper-sugerencia
+{
+border-bottom: 1px solid #01A294;
+border-top: 1px solid #01A294;
+margin-bottom: 13px;
+margin-top: 13px;
+  padding-bottom: 8px;
+}
+
+.wrapper-sugerencia .sugerencia-info
+{
+color: #949494;
+font-size: 14px;
+}
+
+.list-results em
+{
+color: #9a9393;
+font-size: 12px;
+}
+
+.list-results strong
+{
+font-weight: bold;
+font-size: 14px;
+}
+
+.wrapper-ficha .list-results li
+{
+border-bottom: 1px dashed #BBBBBB;
+margin-bottom: 10px ;
+padding-bottom: 10px ;
+}
+
+.more-info
+{
+font-size: 12px;
+color: #01877c;
+text-decoration: underline;
+}
+
+
 
 /* ==|== media queries ====================================================== */
 
@@ -555,5 +642,3 @@ button#search-button:hover {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-
-
