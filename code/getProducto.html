@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<title>Productos Sanos</title>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(':submit').live('click', function() { // This event fires when a button is clicked
+		var button = $(this).val();
+		$.ajax({ // ajax call starts
+			url: 'http://127.0.0.1/codeigniter/index.php/api/search/producto/code/8480000107480/format/json', 
+			dataType: 'json', // Choosing a JSON datatype
+			success: 
+			function(data) // Variable data constains the data we get from serverside
+			{
+				$('#prod').html(''); // Clear #prod div				
+				$('#prod').append('Nombre: ' + data['NombreProducto'] + '<br/>');
+			}
+		});
+		return false; // keeps the page from not refreshing 
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<form method="post" action="">
+		<button value="codigo" type="submit">Trae Datos</button>
+	</form>
+	
+	<div id="prod">
+	</div>
+
+</body>
+</html>
