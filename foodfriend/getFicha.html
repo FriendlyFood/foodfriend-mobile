@@ -286,6 +286,30 @@
 				return results[1];
 		}	 
 		
+		function semaforo(label,id)
+		{
+			if(id==0)
+			{
+				$(label).append('<em> producto no recomendado </em>');
+				$(label).append('<img src="assets/img/green-signal.png" alt="Rojo"/>');
+				$(label).append('assets/img/green-signal.png');
+			}
+			else if(id==1)
+			{
+				$(label).append('<em> precaucion </em>');
+				$(label).append('<img src="assets/img/yellow-signal.png" alt="Amarillo"/>');
+			}
+			else if(id==2)
+			{
+				$(label).append('<em> producto no recomendado </em>');
+				$(label).append('<img src="assets/img/red-signal.png" alt="Rojo"/>');
+			}
+			else
+			{
+				$(label).append('error');
+			}
+		}
+		
 		$(document).ready(function () {
 			// var frank_param = "8480000107480"; // gup( 'code' );
 			var frank_param = gup( 'codigo' );
@@ -296,12 +320,12 @@
 				success: 
 				function(data) // Variable data constains the data we get from serverside
 				{
-					$('#producto').append(data['NombreProducto'] + '<br/>');
-					$('#calorias').append(data['KcalFlag'] + '<br/>');
-					$('#grasas').append(data['GrasaFlag'] + '<br/>');
-					$('#saturadas').append(data['GrasaSaturadaFlag'] + '<br/>');
-					$('#azucares').append(data['HdeCFlag'] + '<br/>');
-					$('#sodio').append(data['SodioFlag'] + '<br/>');
+					$('#producto').append(data['NombreProducto'] + '');					
+					semaforo('#calorias',data['KcalFlag']);
+					semaforo('#grasas',data['GrasaFlag']);
+					semaforo('#saturadas',data['GrasaSaturadaFlag']);
+					semaforo('#azucares',data['HdeCFlag']);					
+					semaforo('#sodio',data['SodioFlag']);					
 				}
 			});
 		});	        
@@ -328,7 +352,7 @@
           <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="./index.html">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
               <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
@@ -356,7 +380,7 @@
 		  <hr class="featurette-divider">
 		  <div class="wrapper-ficha">
 		  <p class="detail-title">Producto</p>
-		  <h1>Nombre del Producto</h1>
+		  <div id="producto"></div>
 		  <div class="wrapper-sugerencia">
 		  <p class="detail-title">Sugerencia</p>
 		  <p class="sugerencia-info">
@@ -365,43 +389,26 @@
 		  </div>
 		  
 		  <ul class="list-results">
-			<li class="red-class"> <strong>Calorias</strong> <br /> <em> producto no Recomendado </em> <img src="assets/img/red-signal.png" alt="Red" /> <br /> <a class="more-info" href="#">info</a> </li>
-			<li class="green-class"> <strong>Grasas</strong> <br /> <em> producto Recomendado </em>  <img src="assets/img/green-signal.png" alt="Green" /> <br /> <a class="more-info" href="#">info</a></li>
-			<li class="yellow-class"> <strong>Grasas Saturadas</strong> <br /> <em> producto Recomendado </em> <img src="assets/img/yellow-signal.png" alt="yellow" /> <br /> <a class="more-info" href="#">info</a></li>
-			<li class="red-class"> <strong>Sodio</strong> <br /> <em> producto Recomendado </em> <img src="assets/img/red-signal.png" alt="Red" /> <br /> <a class="more-info" href="#">info</a></li>
-			<li class="green-class"> <strong>Azúcares</strong> <br /> <em> producto Recomendado </em>  <img src="assets/img/green-signal.png" alt="green" /> <br /> <a class="more-info" href="#">info</a></li>
+			<li class="red-class"> <strong>Calorias</strong>
+			<div id="calorias"></div>
+			
+			<li class="green-class"> <strong>Grasas</strong> 
+			<div id="grasas"></div>
+
+			<li class="yellow-class"> <strong>Grasas Saturadas</strong> 
+			<div id="saturadas"></div>
+			
+			<li class="red-class"> <strong>Sodio</strong> 
+			<div id="sodio"></div>
+			
+			<li class="green-class"> <strong>Azucares</strong> 
+			<div id="azucares"></div>
 		  </ul>
-		  </div>        
+		  </div>
+		  <button value="volver" type="submit">Volver</button>
       </div>
 
       <!-- /END THE FEATURETTES -->
-
-
-
-	<div id="container">
-        <div id="contact-form" class="clearfix">
-			<form method="post" action="./index.html">
-		        <div id="labelProducto">Producto</div>
-		        <div id="producto"></div>
-				
-		        <div id="labelComponente">Calorias</div>
-				<div id="calorias"></div>
-				
-		        <div id="labelComponente">Grasas</div>
-				<div id="grasas"></div>
-				
-		        <div id="labelComponente">Grasas Saturadas</div>
-				<div id="saturadas"></div>
-				
-		        <div id="labelComponente">azucares</div>
-				<div id="azucares"></div>
-				
-		        <div id="labelComponente">sodio</div>
-				<div id="sodio"></div>
-				<button value="volver" type="submit">Volver</button>
-			</form>
-		</div>
-	</div>
 
 	
 </body>
