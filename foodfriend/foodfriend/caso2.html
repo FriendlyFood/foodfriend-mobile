@@ -1,30 +1,18 @@
-<!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
-	<title>Pollos en Dieta</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pollos en Dieta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Ficha de calidad de un alimento">
-	<meta name="author" content="Chubasco">
-		
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<link rel="stylesheet" href="css/style.css?v=2">
- 
- <!-- Le styles -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-	<link href="assets/css/style.css" rel="stylesheet" media="screen">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <style>
 
     /* GLOBAL STYLES
- /* GLOBAL STYLES
     -------------------------------------------------- */
     /* Padding below the footer and lighter body text */
 
@@ -256,7 +244,7 @@
     }
     </style>
 
-	 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -269,49 +257,11 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
- 
-	<script src="assets/js/libs/modernizr-1.7.min.js"></script>
-    <script src="assets/js/jquery.js"></script>
+  <body>
 
-	 <script type="text/javascript">	
-	 
-		function gup( name ){
-			var regexS = "[\\?&]"+name+"=([^&#]*)";
-			var regex = new RegExp ( regexS );
-			var tmpURL = window.location.href;
-			var results = regex.exec( tmpURL );
-			if( results == null )
-				return"";
-			else
-				return results[1];
-		}	 
-		
-		$(document).ready(function () {
-			// var frank_param = "8480000107480"; // gup( 'code' );
-			var frank_param = gup( 'codigo' );
-			// alert(frank_param);
-			$.ajax({ // ajax call starts
-				url: 'http://192.168.0.123/codeigniter/index.php/api/search/producto/code/'+frank_param+'/format/json', 
-				dataType: 'json', // Choosing a JSON datatype
-				success: 
-				function(data) // Variable data constains the data we get from serverside
-				{
-					$('#producto').append(data['NombreProducto'] + '<br/>');
-					$('#calorias').append(data['KcalFlag'] + '<br/>');
-					$('#grasas').append(data['GrasaFlag'] + '<br/>');
-					$('#saturadas').append(data['GrasaSaturadaFlag'] + '<br/>');
-					$('#azucares').append(data['HdeCFlag'] + '<br/>');
-					$('#sodio').append(data['SodioFlag'] + '<br/>');
-				}
-			});
-		});	        
-    </script>
-	
-</head>
 
-<body>
 
-<!-- NAVBAR
+    <!-- NAVBAR
     ================================================== -->
     <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
     <div class="container navbar-wrapper">
@@ -352,57 +302,40 @@
     </div><!-- /.container -->
 
       <!-- START THE FEATURETTES -->
-      <div class="featurette">	  
-		  <hr class="featurette-divider">
-		  <div class="wrapper-ficha">
-		  <p class="detail-title">Producto</p>
-		  <h1>Nombre del Producto</h1>
-		  <div class="wrapper-sugerencia">
-		  <p class="detail-title">Sugerencia</p>
-		  <p class="sugerencia-info">
-		  Este producto se debe consumir con precaucon
-		  </p>	  
-		  </div>
-		  
-		  <ul class="list-results">
-			<li class="red-class"> <strong>Calorias</strong> <br /> <em> producto no Recomendado </em> <img src="assets/img/red-signal.png" alt="Red" /> <br /> <a class="more-info" href="#">info</a> </li>
-			<li class="green-class"> <strong>Grasas</strong> <br /> <em> producto Recomendado </em>  <img src="assets/img/green-signal.png" alt="Green" /> <br /> <a class="more-info" href="#">info</a></li>
-			<li class="yellow-class"> <strong>Grasas Saturadas</strong> <br /> <em> producto Recomendado </em> <img src="assets/img/yellow-signal.png" alt="yellow" /> <br /> <a class="more-info" href="#">info</a></li>
-			<li class="red-class"> <strong>Sodio</strong> <br /> <em> producto Recomendado </em> <img src="assets/img/red-signal.png" alt="Red" /> <br /> <a class="more-info" href="#">info</a></li>
-			<li class="green-class"> <strong>Azúcares</strong> <br /> <em> producto Recomendado </em>  <img src="assets/img/green-signal.png" alt="green" /> <br /> <a class="more-info" href="#">info</a></li>
-		  </ul>
-		  </div>        
-      </div>
+
+      <hr class="featurette-divider">
+
+		<ul class="nav nav-tabs nav-stacked">
+		  <li class="active"><a href="#">Home</a></li>
+		  <li><a href="#">Profile</a></li>
+		  <li><a href="#">Messages</a></li>
+		</ul>
 
       <!-- /END THE FEATURETTES -->
 
 
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2012 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
 
-	<div id="container">
-        <div id="contact-form" class="clearfix">
-			<form method="post" action="./index.html">
-		        <div id="labelProducto">Producto</div>
-		        <div id="producto"></div>
-				
-		        <div id="labelComponente">Calorias</div>
-				<div id="calorias"></div>
-				
-		        <div id="labelComponente">Grasas</div>
-				<div id="grasas"></div>
-				
-		        <div id="labelComponente">Grasas Saturadas</div>
-				<div id="saturadas"></div>
-				
-		        <div id="labelComponente">azucares</div>
-				<div id="azucares"></div>
-				
-		        <div id="labelComponente">sodio</div>
-				<div id="sodio"></div>
-				<button value="volver" type="submit">Volver</button>
-			</form>
-		</div>
-	</div>
+    </div><!-- /.container -->
 
-	
-</body>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+  </body>
 </html>
