@@ -21,8 +21,8 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/globalstyle.css" rel="stylesheet">
    
-
 	 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,13 +34,13 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
 
  
 	<script src="assets/js/libs/modernizr-1.7.min.js"></script>
     <script src="assets/js/jquery.js"></script>
 
-	 <script type="text/javascript">		 
+	 <script type="text/javascript">	
+	 
 		function gup( name ){
 			var regexS = "[\\?&]"+name+"=([^&#]*)";
 			var regex = new RegExp ( regexS );
@@ -56,13 +56,13 @@
 		{
 			if(id==0)
 			{
-				$(label).append('<em>Producto no recomendado </em>');
+				$(label).append('<em> producto no recomendado </em>');
 				$(label).append('<img src="assets/img/green-signal.png" alt="Rojo"/>');
 				$(label).append('assets/img/green-signal.png');
 			}
 			else if(id==1)
 			{
-				$(label).append('<em>Precaucion </em>');
+				$(label).append('<em> precaucion </em>');
 				$(label).append('<img src="assets/img/yellow-signal.png" alt="Amarillo"/>');
 			}
 			else if(id==2)
@@ -80,8 +80,9 @@
 			// var frank_param = "8480000107480"; // gup( 'code' );
 			var frank_param = gup( 'codigo' );
 			// alert(frank_param);
-			$.ajax({ // ajax call starts
-				url:'http://ec2-204-236-193-116.compute-1.amazonaws.com/mobile/foodfriend/proxyCode.php?codigo='+frank_param,
+			$.ajax({ // ajax call starts				
+				url:'http://ec2-204-236-193-116.compute-1.amazonaws.com/mobile/testJ.php?codigo='+frank_param,
+				// url: 'http://friendlyfood.me/codeigniter/index.php/api/search/producto/code/'+frank_param+'/format/json', 
 				dataType: 'json', // Choosing a JSON datatype
 				success: 
 				function(data) // Variable data constains the data we get from serverside
@@ -108,40 +109,49 @@
 
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
-
-		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#">Project name</a>
-
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
           <div class="nav-collapse collapse">
             <ul class="nav">
-               <li ><a href="index.html">Inicio</a></li>
-			   <li><a href="searchCod.html">Ingrese el código de barra</a></li>
-			  <li><a href="searchProd.html">Ingrese el nombre del producto</a></li>
-              
+              <li class="active"><a href="./index.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!-- /.navbar-inner -->
       </div><!-- /.navbar -->
 
     </div><!-- /.container -->
-	<div id="main-container">
-		<div id="main" class="wrapper clearfix">
-		
-		
-    <article>
-      
-     
+
+      <!-- START THE FEATURETTES -->
+      <div class="featurette">	  
+		  <hr class="featurette-divider">
 		  <div class="wrapper-ficha">
 		  <p class="detail-title">Producto</p>
 		  <div id="producto"></div>
 		  <div class="wrapper-sugerencia">
 		  <p class="detail-title">Sugerencia</p>
 		  <p class="sugerencia-info">
-		  Este producto se debe consumir con precaución
+		  Este producto se debe consumir con precaucon
 		  </p>	  
 		  </div>
 		  
@@ -162,12 +172,11 @@
 			<div id="azucares"></div>
 		  </ul>
 		  </div>
-		  <div class="boton"><a  href="index.html">← Volver</a></div>
-      
+		  <button value="volver" type="submit">Volver</button>
+      </div>
 
-      
-</article>
-	</div>
-		</div>
+      <!-- /END THE FEATURETTES -->
+
+	
 </body>
 </html>
