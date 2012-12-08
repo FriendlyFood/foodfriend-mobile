@@ -23,11 +23,12 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-
+    
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 	
   </head>
 
-  <body class="landing">
+  <body>
 
 	<!-- NAVBAR
 	================================================== -->
@@ -42,15 +43,13 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </a>
-		<a class="brand" href="index.html">
-			<img src="assets/img/friendly-food-logo.png" alt="" />
-		</a>
+		  <a class="brand" href="index.html"><img src="assets/img/friendly-food-logo.png" alt="" /></a>
 		  <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 		  <div class="nav-collapse collapse">
 			<ul class="nav">
-			  <li class="active"><a href="index.html">Inicio</a></li>
-			  <li><a href="searchCod.html">Codigo de Barra</a></li>
-			  <li><a href="searchProd.html">Producto</a></li>
+			  <li ><a href="index.html">Inicio</a></li>
+			  <li class="active"><a href="searchCod.html">Busqueda por código de barra</a></li>
+			  <li><a href="searchProd.html">Busqueda por nombre</a></li>
 			</ul>
 		  </div><!--/.nav-collapse -->
 		</div><!-- /.navbar-inner -->
@@ -63,32 +62,44 @@
 			
 			<article>
 				<section>
-					<form class="well" action="./getFicha.html" method="get">
+					<form class="well form-ingreso" action="./getFicha.html" method="get">
 					  <fieldset>
-						<legend>Codigo de Barra</legend>
-						<label>Codigo de Barra</label>
-						<input type="text" placeholder="Ejemplo: 7802000002557" name="codigo" id="codigo">
-						<span class="help-block">Ingrese el numero de codigo de barra</span>						
-						<input type="submit" value="Buscar">
+						<legend>Ingrese el código de barra del producto que deseas revisar</legend>
+						<label>Código de Barra</label>
+						<input type="text" placeholder="7802000002557" name="codigo" id="codigo">
+						<span class="help-block">Debe tener al menos 13 números, por ejemplo: 7802000002557</span>
+						<input class="btns" type="submit" value="Buscar">
 					  </fieldset>
 					</form>
-						
-					<ul class="landing-btns" >
-						<li><div class="boton"><a  href="index.html">Volver</a></div></li>
-					</ul>
+						<div class="boton"><a href="index.html">← Volver</a></div>
+					
 				</section>				
 			</article>
 			
 		</div> <!-- #main -->
 	</div> <!-- #main-container -->
-
+	
+<!-- Toolbar -->
+<div class="toolbar"> 
+ <div class="wrapper-toolbar">
+  <ul class="nav-toolbar clearfix">
+  	<li class="action-home"><a href="index.html">Home</a></li>
+	<li class="action-type"><a href="#">Type Barcode</a></li>
+  	<li class="action-scan"><a href="#">Scan Barcode</a></li>  	
+  	<li class="action-search"><a href="#">Search Product</a></li>
+  </ul>
+ </div>
+</div>
+<!-- Toolbar -->
 	<div id="footer-container">
 		<footer class="wrapper">
 			
 		</footer>
 	</div>
-	
-		<!-- Le javascript
+<div class="space">
+</div>
+
+	<!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>

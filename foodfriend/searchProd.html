@@ -23,9 +23,10 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
   </head>
 
-  <body class="landing">
+  <body>
 
   	<!-- NAVBAR
 	================================================== -->
@@ -44,9 +45,9 @@
 		  <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 		  <div class="nav-collapse collapse">
 			<ul class="nav">
-			  <li class="active"><a href="index.html">Inicio</a></li>
-			  <li><a href="searchCod.html">Codigo de Barra</a></li>
-			  <li><a href="searchProd.html">Producto</a></li>
+			  <li ><a href="index.html">Inicio</a></li>
+			 <li><a href="searchCod.html">Ingrese el código de barra</a></li>
+			  <li class="active"><a href="searchProd.html">Ingrese el nombre del producto</a></li>
 			</ul>
 		  </div><!--/.nav-collapse -->
 		</div><!-- /.navbar-inner -->
@@ -60,19 +61,21 @@
 			<article>
 				<section>
 				
-				<form class="well">
+				<form class="well form-search">
 				  <fieldset>
-					<legend>Producto</legend>
+					<legend>Ingrese el producto que deseas buscar</legend>
+					
 					<label>Nombre Producto</label>
-					<input type="text" placeholder="Ejemplo PAPAS LAYS CORTE AMERICANO">
-					<span class="help-block">Ingrese Nombre del Producto que aparece en la etiqueta de precio.</span>
-					<button type="submit" class="btn">Buscar</button>
+					<br />
+					<input type="text">
+					<span class="help-block">Ingrese Nombre del Producto que aparece en la etiqueta de precio, por ejemplo: PAPAS LAYS CORTE AMERICANO</span>
+					<button type="submit" class="btns">Buscar</button>
 				  </fieldset>
 				</form>
 				
-				<ul class="landing-btns" >
-					<li><div class="boton"><a class="boton" href="index.html">Volver</a></div></li>
-				</ul>
+				
+					<div class="boton"><a  href="index.html">← Volver</a></div>
+				
 				
 				
 				
@@ -82,6 +85,20 @@
 			
 		</div> <!-- #main -->
 	</div> <!-- #main-container -->
+
+	<!-- Toolbar -->
+	<div class="toolbar"> 
+	 <div class="wrapper-toolbar">
+	  <ul class="nav-toolbar clearfix">
+		<li class="action-home"><a href="index.html">Home</a></li>
+		<li class="action-type"><a href="#">Type Barcode</a></li>
+		<li class="action-scan"><a href="#">Scan Barcode</a></li>  	
+		<li class="action-search"><a href="#">Search Product</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<!-- Toolbar -->
+
 
 	<div id="footer-container">
 		<footer class="wrapper">
